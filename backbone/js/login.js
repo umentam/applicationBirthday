@@ -43,7 +43,7 @@ $('button[type="submit"]').click(function(e) {
         "background-image": "url('http://api.randomuser.me/0.3.2/portraits/women/35.jpg')"
     });
 
-      setTimeout(function(){ alert("Hello"); }, 2000);
+      setTimeout(function(){ alert("Hello"); }, 3000);
       window.location.replace("/create_event.html");
 
 
