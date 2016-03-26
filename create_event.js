@@ -15,10 +15,10 @@ function createEvent() {
     var location = $('#location').val();
     var eventName = $('#eventName').val();
     var birthDate = $('#birthDate').val();
-    var birthDate = $('#description').val();
-    var birthDate = $('#eventDate').val();
-    var birthDate = $('#goal').val();
-    var birthDate = $('#charity').val();
+    var description = $('#description').val();
+    var eventDate = $('#eventDate').val();
+    var goal = $('#goal').val();
+    var charity = $('#charity').val();
 
 
     var user = new Parse.User();
