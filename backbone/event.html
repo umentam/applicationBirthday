@@ -9,11 +9,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Create an Event</title>
+    <title>Jumbotron Template for Bootstrap</title>
 
-    <style>body {
-      padding-top: 40px;
-    }</style>
+
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,21 +38,13 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.css" rel="stylesheet">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.js"></script>
-    <script src="create_event.js"></script>
-
-
+    <style type="text/css"> .navbar-default {
+      background-color: yellow;}</style>
   </head>
 
   <body>
 
-    <h1 style="text-align: center">Create a Birthday Event</h1>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -63,7 +53,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">BetterDay</a>
+          <a class="navbar-brand" href="/landing.html">Cake</a>
         </div>
         <!--<div id="navbar" class="navbar-collapse collapse">-->
           <!--<form class="navbar-form navbar-right">-->
@@ -79,6 +69,12 @@
       </div>
     </nav>
 
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="background: url(../party_bg.jpg); height:200px">
+      <div class="container">
+
+      </div>
+    </div>
 
     <!--<div class="container">-->
       <!--&lt;!&ndash; Example row of columns &ndash;&gt;-->
@@ -101,45 +97,25 @@
       <!--</div>-->
 
     <div class="container">
-      <form>
-        <div class="form-group">
-          <label for="eventName">Event Name:</label>
-          <input type="text" class="form-control" id="eventName" placeholder="Your Birthday Turnup Here">
-        </div>
-        <div class="form-group"> <!--use google api for this-->
-          <label for="location">Location:</label>
-          <input type="text" class="form-control" id="location" placeholder="Where's it at?">
-        </div>
-        <div class="form-group">
-          <label for="birthDate">Your Birthday:</label>
+      <h1>Ken's Birthday is Coming Up!</h1>
+      <h4>It's @ Thursday at 5pm in NYC</h4>
+      <h4>10 Friends are Celebrating So Far</h4>
+      <h4> Benefits The Sickle Cell Disease Association of America</h4>
+      <p>Join me April 17th at the Highline Ballroom as I ring in by 22nd birthday. Instead of getting me a gift, please consider donating to Sickle Cell Disease Association of America, Inc.. This is a cause that is near and dear to my heart and I hope to increase awareness about this condition while celebrating my special day. Every dollar counts!</p>
 
-          <input data-provide="datepicker" type="text" class="form-control" id="birthDate" placeholder="BirthDate">
+      <h3>About the Charity</h3>
+      <p>The vision for a national coordinated approach to addressing issues related to sickle cell disease was unveiled in 1971 when representatives of 15 community sickle cell organizations met at "Wingspread," a Racine, Wisconsin conference center, as guest of the Johnson Foundation. Out of that meeting, the National Association for Sickle Cell Disease was created. The name was changed to Sickle Cell Disease Association of America, Inc. in 1994. Our mission, however, remains the same...</p>
+      <button type="button" href="/Donations/index.html" class="btn btn-default btn-lg" style="background-color: white">Donate!</button>
+      <table>
+        <tr></tr><tr></tr>
+      </table>
+    </div>
 
-        </div>
+      <hr>
 
-        <div class="form-group">
-          <label for="eventDate">Your Birthday:</label>
-
-          <input data-provide="datepicker" type="text" class="form-control" id="eventDate" placeholder="Event Date">
-
-        </div>
-        <div class="form-group">
-          <label for="description">Description:</label>
-          <input type="text" class="form-control" id="description" placeholder="description">
-        </div>
-
-        <div class="form-group">
-          <label for="goal">Goal:</label>
-          <input type="text" class="form-control" id="goal" placeholder="Goal">
-        </div>
-
-        <div class="form-group">
-          <label for="charity">Choose your charity:</label>
-          <input type="text" class="form-control" id="charity" placeholder="Type your charity here">
-        </div>
-
-        <button type="submit" class="btn btn-default" id="submit">Submit</button>
-      </form>
+      <footer>
+        <p>&copy; 2015 Company, Inc.</p>
+      </footer>
     </div> <!-- /container -->
 
 

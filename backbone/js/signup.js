@@ -4,42 +4,59 @@
 Parse.initialize("1Nme1kGOwimbGs2cVfNS8wj2jpYnMUblNgdTQsl2", 'cvxX7RpSbkm2fPs19auYbgPPE0Y4bbVphqbohnHg');
 //Parse.serverURL = 'http://localhost:1337/parse';
 
-window.onload = function(){
+
+$(function(){
 
 
-};
+    $('button[type="submit"]').click(function(e) {
+        e.preventDefault();
 
-$( "#btn-signup" ).click(function() {
-    createUser();
-});
+        var username = $("input[name='user']").val();
+        alert(username);
+
+        var password = $("input[name='pass']").val();
+        var password2 = $("input[name='pass2']").val();
+        alert(username + " " + password + " " + password2);
+
+
+        if(password == password2){
+            var user = new Parse.User();
+            user.set("username", username);
+            user.set("password", password2);
+
+            user.signUp(null, {
+                success: function(user) {
+                    // Hooray! Let them use the app now.
+                    alert('Sign up successful');
+                },
+                error: function(user, error) {
+                    // Show the error message somewhere and let the user try again.
+                    alert("Error: " + error.code + " " + error.message);
+                }
+            });
+        }
+        else{
+            alert("Error: " + "Passwords are not identical");
+        }
+
+    });
+
+
+}); // End of annoymous function
+
+
+
+
+
+//$( "#btn-signup" ).click(function() {
+//    alert("olay");
+//        e.preventDefault();
+//
+//        createUser();
+//});
 
 function createUser(){
-    var username = $('#username').val();
 
-    var password = $('#pass').val();
-    var password2 = $('#pass2').val();
-    alert(username + " " + password + " " + password2);
-
-
-    if(password == password2){
-        var user = new Parse.User();
-        user.set("username", username);
-        user.set("password", password2);
-
-        user.signUp(null, {
-            success: function(user) {
-                // Hooray! Let them use the app now.
-                alert('yay');
-            },
-            error: function(user, error) {
-                // Show the error message somewhere and let the user try again.
-                alert("Error: " + error.code + " " + error.message);
-            }
-        });
-    }
-    else{
-        alert("Error: " + "Passwords are not identical");
-    }
 
 
 }
