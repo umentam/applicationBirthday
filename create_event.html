@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Create an Event</title>
 
     <style>body {
       padding-top: 40px;
@@ -103,21 +103,29 @@
     <div class="container">
       <form>
         <div class="form-group">
-          <label for="eventNameLabel">Event Name:</label>
-          <input type="text" class="form-control" id="eventNameLabel" placeholder="Your Birthday Turnup Here">
+          <label for="eventName">Event Name:</label>
+          <input type="text" class="form-control" id="eventName" placeholder="Your Birthday Turnup Here">
         </div>
         <div class="form-group"> <!--use google api for this-->
           <label for="location">Location:</label>
           <input type="text" class="form-control" id="location" placeholder="Where's it at?">
         </div>
         <div class="form-group">
-          <label for="birthdate">Your Birthday:</label>
+          <label for="birthDate">Your Birthday:</label>
 
-          <input data-provide="datepicker" type="text class="form-control" id="birthdate" placeholder="Date and Time">
+          <input data-provide="datepicker" type="text" class="form-control" id="birthDate" placeholder="BirthDate">
+
+        </div>
+
+        <div class="form-group">
+          <label for="eventDate">Your Birthday:</label>
+
+          <input data-provide="datepicker" type="text" class="form-control" id="eventDate" placeholder="Event Date">
+
         </div>
         <div class="form-group">
           <label for="description">Description:</label>
-          <input type="text" class="form-control" id="description" placeholder="Description">
+          <input type="text" class="form-control" id="description" placeholder="description">
         </div>
 
         <div class="form-group">
@@ -127,17 +135,10 @@
 
         <div class="form-group">
           <label for="charity">Choose your charity:</label>
-          <select class="form-control" id="charity">
-            <option>National Society of Black Engineers</option>
-            <option>American Heart Association</option>
-            <option>Greenpeace</option>
-            <option>Black Lives Matter Legal Defense Fund</option>
-            <option>Syrian Refugee Fund</option>
-            <option>Girls Who Code</option>
-          </select>
+          <input type="text" class="form-control" id="charity" placeholder="Type your charity here">
         </div>
 
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default" id="submit">Submit</button>
       </form>
     </div> <!-- /container -->
 
