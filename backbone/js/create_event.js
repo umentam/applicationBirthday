@@ -28,7 +28,6 @@ function createEvent() {
     var charity = $('#charity').val();
 
 
-    alert(location);
     event.set("location", location);
     event.set("description", description);
     event.set("birthday", birthDate);
