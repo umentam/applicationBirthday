@@ -1,3 +1,6 @@
+/**
+ * Created by dan on 3/26/16.
+ */
 Parse.initialize("1Nme1kGOwimbGs2cVfNS8wj2jpYnMUblNgdTQsl2", 'cvxX7RpSbkm2fPs19auYbgPPE0Y4bbVphqbohnHg');
 //Parse.serverURL = 'http://localhost:1337/parse';
 
@@ -12,6 +15,7 @@ $( "#btn-signup" ).click(function() {
 
 function createUser(){
     var username = $('#username').val();
+
     var password = $('#pass').val();
     var password2 = $('#pass2').val();
     alert(username + " " + password + " " + password2);
