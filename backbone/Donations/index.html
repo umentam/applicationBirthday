@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Donations to Charity</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div id="test" class="col-xs-12 col-md-6">
+
+                            <div class="payment">
+                                <h1 class="title">Payment Information</h1>
+                            </div> <!-- end of personal-information -->
+
+                            <div class="form-frame">
+                                <form>
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-6">
+                                        <div class="form-group">
+                                            <input id="first-name" type="text" name="first-name" required="required" autocomplete="on" maxlength="20" size="30" placeholder="First Name"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-md-6">
+                                        <div class="form-group">
+                                            <input id="last-name" type="text" name="last-name" required="required" autocomplete="on" maxlength="20" size="30" placeholder="Last Name"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-3 col-md-3"></div>
+                                    <div class="col-xs-6 col-xs-6">
+                                        <div class="form-group">
+                                            <div class="card">
+                                                <img src="images/card.png"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <label for="card-number">Card Number</label>
+                                    <div class="col-xs-12 col-md-12">
+                                        <div class="form-group">
+                                            <input id="card-number" type="text" name="card-number" required="required" autocomplete="on" pattern="[0-9]*" maxlength="16" size="26" placeholder="Credit/Debit Card Number"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-7 col-md-7 expiry">
+                                        <label id="label2" for="expiry-date">Expiry Date</label>
+                                        <div class="form-group">
+                                            <input id="expiry-date" type="text" name="expiry-date" required="required"  maxlength="5" size="26" placeholder="MM / YY"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-4 col-md-4">
+                                        <label id="label2" for="cvv">Security Code</label>
+                                        <div class="form-group">
+                                            <input id="cvv" type="text" name="cvv" required="required" autocomplete="on" pattern="[0-9]*" size="26" maxlength="3" placeholder="CCV"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="street-address1">Address</label>
+                                    <div class="container"></div>
+                                    <div class="col-xs-5 col-md-5">
+
+                                        <div class="form-group">
+                                            <input id="street-address1" type="text" required="required" name="street-address" maxlength="20" size="26" placeholder="Address Line 1"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-2 col-md-2"></div>
+
+                                    <div class="col-xs-5 col-md-5">
+                                        <div class="form-group">
+                                            <input id="street-address2" type="text" required="required" name="street-address" maxlength="20" size="26" placeholder="Address Line 2"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-5 col-md-5">
+                                        <div class="form-group">
+                                            <input id="city" type="text" required="required" name="city" pattern="[A-Z]*" size="26" placeholder="City"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-2 col-md-2"></div>
+
+                                    <div class="col-xs-5 col-md-5">
+                                        <div class="form-group">
+                                            <input id="state" type="text" required="required" name="state" size="26" pattern="[A-Za-z]" title="Please Enter your two-letter state abbreviation" placeholder="Postal Code"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-6">
+                                        <div class="form-group">
+                                            <input id="country" type="text" required="required" size="26" name="country" placeholder="Country"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <div class="row">
+                                    <div class="col-xs-10 col-md-12">
+                                        <div class="form-group">
+                                            <input id="input-button" type="submit" value="Submit" onclick="return savePayment();"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+            </div>
+        </div>
+    </div> <!-- end of form-container -->
+  </body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/card.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/121761/jquery.card.js'></script>
+    <script src="js/index.js"></script>
+</html>
