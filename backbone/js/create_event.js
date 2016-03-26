@@ -3,15 +3,22 @@ Parse.initialize("1Nme1kGOwimbGs2cVfNS8wj2jpYnMUblNgdTQsl2", 'cvxX7RpSbkm2fPs19a
 
 window.onload = function(){
 
-
 };
 
-$( "#submit" ).click(function() {
+$( "#submit" ).click(function(e) {
+    e.preventDefault();
     createEvent();
 });
 
 function createEvent() {
     //eventName location birthDate description eventDate goal charity
+
+
+    var Event = new Parse.Object.extend("Event")
+    var event = new Event();
+
+
+
     var location = $('#location').val();
     var eventName = $('#eventName').val();
     var birthDate = $('#birthDate').val();
@@ -21,17 +28,22 @@ function createEvent() {
     var charity = $('#charity').val();
 
 
-    var user = new Parse.User();
-    user.set("username", username);
-    user.set("password", password);
+    alert(location);
+    event.set("location", location);
+    event.set("description", description);
+    event.set("birthday", birthDate);
+    event.set("goal", goal);
+    event.set("charity", charity);
+    event.set("name", eventName);
+    event.set("user", Parse.User.current());
 
-    user.signUp(null, {
-        success: function (user) {
-            // Hooray! Let them use the app now.
-            alert('yay');
+    event.save(null, {
+        success: function(item) {
+            //Success Callback
+            window.location.replace("/event.html");
         },
-        error: function (user, error) {
-            // Show the error message somewhere and let the user try again.
+        error: function(gameScore, error) {
+            //Failure Callback
             alert("Error: " + error.code + " " + error.message);
         }
     });
