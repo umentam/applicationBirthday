@@ -8,7 +8,7 @@ var express         = require('express'),
 
 var app = express();
 app.set('views', './views');
-app.use(express.static('public'));
+app.use(express.static('backbone'));
 app.use(logger('combined'));
 app.use(session({
     secret: 'musessions',
@@ -174,6 +174,6 @@ app.get('/v1/plan/:id', function(req, res) {
 });
 
 
-var server = app.listen(8080, function () {
+var server = app.listen(8080, '0.0.0.0', function () {
     console.log('Example app listening on ' + server.address().port);
 });
